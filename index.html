@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>puddi</title>
+    <style>
+      body { margin: 0; font-family: "Helvetica Neue", Arial, sans-serif; overflow: hidden; }
+      canvas { display: block; }
+      #demo-controls {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        padding: 8px 10px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 10;
+      }
+      #demo-controls label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      #demo-select {
+        font-size: 14px;
+        padding: 4px 8px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body>
+    <div id="demo-controls">
+      <label for="demo-select">Demo</label>
+      <select id="demo-select"></select>
+    </div>
+    <canvas id="canvas" width="0" height="0"></canvas>
+    <script src="dist/vendor/three.min.js" type="text/javascript"></script>
+    <script src="dist/bundle.js" type="text/javascript"></script>
+  </body>
+</html>
