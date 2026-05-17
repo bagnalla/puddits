@@ -1,9 +1,9 @@
 # puddi
 
-Puddi is a minimal, object-oriented layer over the HTML5 canvas. It provides a tiny runtime loop plus a simple scene graph via `PuddiObject`, along with demos and education-oriented helpers that exercise the runtime.
+Puddi is a minimal, object-oriented layer over the HTML5 canvas. It provides a tiny runtime loop plus a simple scene graph via `PuddiObject`.
 
-## Design Philosophy
-Puddi keeps the mental model small: there’s a single update/draw loop and a lightweight, hierarchical object tree. Each `PuddiObject` owns its transform (position, rotation, scale) and can have children. Child transforms are relative to their parent, so grouping is implicit and cheap. By default, objects attach themselves when constructed: if you pass a parent, the object calls `parent.addChild(this)`; otherwise it attaches to the runtime root. That makes local relationships explicit at creation time and avoids global registries or complex scene management.
+## Design
+There’s a single update/draw loop and a lightweight, hierarchical object tree. Each `PuddiObject` owns its transform (position, rotation, scale) and can have children. Child transforms are relative to their parent. By default, objects attach themselves when constructed: if you pass a parent, the object calls `parent.addChild(this)`; otherwise it attaches to the runtime root.
 
 ## Quickstart
 1. Install dependencies:
