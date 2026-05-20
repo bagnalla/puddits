@@ -54,7 +54,12 @@ Methods:
 - `scale(s)` / `scaleTranslated(s)` scale the global transform.
 - `getScale()` / `getTranslate()` access current transform state.
 - `clearTransform()` reset scale/translate to identity.
-- `setCentered(bool)` toggle centered-scaling mode. Call `refresh()` (or any transform method that calls it) to apply immediately.
+- `setCentered(bool)` choose how the global transform is anchored. When `false`
+  (the default), world coordinate `(0, 0)` maps to the canvas top-left plus
+  the current translation. When `true`, world coordinate `(0, 0)` maps to the
+  canvas center, and translation is applied in scaled world units from that
+  center. Call `refresh()` (or any transform method that calls it) after
+  changing this flag to apply it immediately.
 
 ### PuddiObject
 Base class for renderable objects. Subclasses override `_drawSelf` and optionally `_updateSelf`.
